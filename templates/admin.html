@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #00ffcc;
+        }
+
+        table {
+            width: 95%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.12);
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        th {
+            background: rgba(0,255,200,0.3);
+        }
+
+        tr:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background: #00ffcc;
+            border-radius: 8px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #00ccaa;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>👑 Admin Dashboard</h2>
+
+<p>Registered Users + Login Details</p>
+
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Embeddings</th>
+        <th>Login Count</th>
+        <th>Login History</th>
+    </tr>
+
+    {% for u in user_data %}
+    <tr>
+        <td>{{ u.username }}</td>
+        <td>{{ u.embeddings }}/3</td>
+        <td>{{ u.logins }}</td>
+
+        <td>
+            {% for h in u.history %}
+                {{ h }} <br>
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a class="btn" href="/admin_logout">Logout Admin</a>
+
+</body>
+</html>

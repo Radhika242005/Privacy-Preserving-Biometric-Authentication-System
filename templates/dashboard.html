@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .dashboard-container {
+            width: 500px;
+            margin: 80px auto;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0px 0px 18px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(0, 255, 200, 0.15);
+            border-radius: 12px;
+            font-size: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #00e6ff;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #00b8cc;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h2>✅ Login Successful</h2>
+
+    <h3>Welcome, {{ user }} 👋</h3>
+
+    <p>
+        This is your <b>Privacy Preserving Biometric AI Dashboard</b>.
+        <br><br>
+        Your face authentication was verified securely using:
+    </p>
+
+    <div class="highlight-box">
+        🔐 AES Encrypted Face Embeddings <br>
+        ⚡ Adaptive FAISS Matching <br>
+        🤖 DeepFace FaceNet512 Recognition <br>
+        🛡️ Duplicate Face Prevention
+    </div>
+
+    <a href="/logout">Logout</a>
+
+    <div class="footer">
+        Hybrid Privacy Preserving Face Authentication System
+    </div>
+
+</div>
+
+</body>
+</html>
