@@ -31,8 +31,8 @@ EMB_SIZE = 128
 # =====================================================
 # ADMIN LOGIN CREDENTIALS
 # =====================================================
-#ADMIN_USERNAME = "admin"
-#ADMIN_PASSWORD = "admin123"
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "admin123"
 
 # =====================================================
 # LOGIN HISTORY FILE
